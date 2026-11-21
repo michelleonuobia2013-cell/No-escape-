@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-void: #07060B;
+    --bg-obsidian: #0E0C15;
+    --bg-velvet: #161322;
+    --lilac-soft: #E9D8FD;
+    --lilac-glow: #C4A1FF;
+    --lilac-royal: #9F7AEA;
+    --lilac-deep: #6B46C1;
+    --border-hairline: rgba(196, 161, 255, 0.14);
+  }
+
+  html, body, #root {
+    height: 100%;
+    background-color: #07060B;
+    color: #F3EFFA;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle lilac scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07060B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(196, 161, 255, 0.22);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(196, 161, 255, 0.42);
+}
+
+@keyframes lilacBreath {
+  0%, 100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.018);
+  }
+}
+
+@keyframes sigilSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-lilac-breath {
+  animation: lilacBreath 4.5s ease-in-out infinite;
+}
+
+.animate-sigil-spin {
+  animation: sigilSpin 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-lilac-breath,
+  .animate-sigil-spin {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "NO ESCAPE",
+  "description": "A dark-luxury 3D mystery-adventure game set across seven atmospheric locations with 3D character customization, puzzles, solo & story campaigns, and real-time multiplayer.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
